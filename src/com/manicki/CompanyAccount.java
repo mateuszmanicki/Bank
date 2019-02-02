@@ -6,7 +6,7 @@ public class CompanyAccount extends Account {
     private long nip;
     private String regon;
 
-    public CompanyAccount(String customerName, String customerLastName, String acoountNumber, BigDecimal accountStatus, AccountType accountType, long nip, String regon) {
+    public CompanyAccount(String customerName, String customerLastName, String acoountNumber, double accountStatus, AccountType accountType, long nip, String regon) {
         super(customerName, customerLastName, acoountNumber, accountStatus, accountType);
         this.nip = nip;
         this.regon = regon;

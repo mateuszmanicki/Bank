@@ -9,7 +9,7 @@ public class Bank {
                         "Mat",
                         "Man",
                         "26 0001 0002 0003 0004 0005 0006",
-                        BigDecimal.valueOf(0),
+                        0,
                         AccountType.PERSONAL);
 
         CompanyAccount companyAccount =
@@ -17,11 +17,11 @@ public class Bank {
                         "Mat",
                         "Man",
                         "26 0001 0002 0003 0004 0005 0006",
-                        BigDecimal.valueOf(0),
+                        0,
                         AccountType.COMPANY, 691008586,
                         "jakis tam");
 
-        personalAccount.payIn(BigDecimal.valueOf(100));
+        personalAccount.payIn(100);
         System.out.println("Stan konta " + personalAccount.toString() + " = " + personalAccount.getAccountStatus());
     }
 }
