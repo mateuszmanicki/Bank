@@ -54,6 +54,7 @@ public abstract class Account {
     }
 
     public boolean Debit(double debit){
+        System.out.println("Hello world!");
         return (debit < accountStatus);
     }
 }
