@@ -1,5 +1,15 @@
 package com.manicki;
 
-public class PersonalAccount {
+import java.math.BigDecimal;
 
+public class PersonalAccount extends Account {
+
+    public PersonalAccount(String customerName, String customerLastName, String acoountNumber, BigDecimal accountStatus, AccountType accountType) {
+        super(customerName, customerLastName, acoountNumber, accountStatus, accountType);
+    }
+
+    @Override
+    public AccountType getAccountType() {
+        return AccountType.PERSONAL;
+    }
 }

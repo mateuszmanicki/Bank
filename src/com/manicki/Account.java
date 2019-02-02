@@ -1,14 +1,16 @@
 package com.manicki;
 
+import java.math.BigDecimal;
+
 public abstract class Account {
     private String customerName;
     private String customerLastName;
     private String accountNumber;
-    private double accountStatus;
+    private BigDecimal accountStatus;
     private boolean accountOpen;
     private AccountType accountType;
 
-    public Account(String customerName, String customerLastName, String acoountNumber, double accountStatus, AccountType accountType) {
+    public Account(String customerName, String customerLastName, String acoountNumber, BigDecimal accountStatus, AccountType accountType) {
         this.customerName = customerName;
         this.customerLastName = customerLastName;
         this.accountNumber = acoountNumber;
@@ -25,18 +27,23 @@ public abstract class Account {
         this.accountOpen = false;
     };
 
-    public void payIn(double value) {
-        this.accountStatus += value;
+    public void payIn(BigDecimal value) {
+        System.out.println("Pay In = " + value);
+        this.accountStatus.add(value);
     }
 
-    public void payOut(double value) {
-        this.accountStatus -= value;
+    public void payOut(BigDecimal value) {
+        this.accountStatus.subtract(value);
     }
 
     public abstract AccountType getAccountType();
 
     @Override
     public String toString() {
-        return super.toString();
+        return this.accountNumber;
+    }
+
+    public BigDecimal getAccountStatus(){
+        return this.accountStatus;
     }
 }
