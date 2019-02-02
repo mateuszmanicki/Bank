@@ -33,7 +33,7 @@ public abstract class Account {
     }
 
     public void payOut(double value) {
-        this.accountStatus += value;
+        this.accountStatus -= value;
     }
 
     public abstract AccountType getAccountType();
@@ -45,5 +45,9 @@ public abstract class Account {
 
     public double getAccountStatus(){
         return this.accountStatus;
+    }
+
+    public boolean Debit(double debit){
+        return (debit < accountStatus);
     }
 }
