@@ -46,4 +46,10 @@ public abstract class Account {
     public double getAccountStatus(){
         return this.accountStatus;
     }
+
+    public void getLoan(int percent, double valueOfLoan, short lengthOfLoan){
+        System.out.println("Klient " + this.toString() +
+                " wziął pożyczkę na " + lengthOfLoan +
+                "miesiące w wysokości " + (int)valueOfLoan + " na procent: " + percent);
+    }
 }
