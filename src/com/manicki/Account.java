@@ -33,7 +33,7 @@ public abstract class Account {
     }
 
     public void payOut(double value) {
-        this.accountStatus += value;
+        this.accountStatus -= value;
     }
 
     public abstract AccountType getAccountType();
@@ -47,9 +47,14 @@ public abstract class Account {
         return this.accountStatus;
     }
 
+<<<<<<< HEAD
     public void getLoan(int percent, double valueOfLoan, short lengthOfLoan){
         System.out.println("Klient " + this.toString() +
                 " wziął pożyczkę na " + lengthOfLoan +
                 "miesiące w wysokości " + (int)valueOfLoan + " na procent: " + percent);
+=======
+    public boolean Debit(double debit){
+        return (debit < accountStatus);
+>>>>>>> 71196ade1b6a7d0eab942ec7560ec681fdc7be71
     }
 }
